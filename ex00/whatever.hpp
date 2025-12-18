@@ -8,7 +8,7 @@
 template <typename Tp>
 void swap(Tp &a, Tp &b)
 {
-    Tp tmp = a; // if you set tmp as ref and tried to change a like above the tmp will change too cuz it a ref duuh!
+    Tp tmp = a;// if you set tmp as ref and tried to change a like above the tmp will change too cuz it a ref duuh!
     a = b;
     b = tmp;
 }
