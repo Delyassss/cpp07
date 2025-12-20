@@ -70,7 +70,7 @@ class Array
             public :
                 virtual const char *what() const throw()
                 {
-                    return ("out of range\n");
+                    return ("out of range exception");
                 }
         };
 };

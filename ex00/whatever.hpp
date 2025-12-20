@@ -12,6 +12,8 @@ void swap(Tp &a, Tp &b)
     a = b;
     b = tmp;
 }
+
+
 template <typename Tp>
 Tp max(const Tp &a, const Tp &b)
 {

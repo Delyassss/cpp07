@@ -19,7 +19,7 @@ int main()
 
         Array<int> arr3;
         std::cout << "empty integer array size = " << arr3.size() << std::endl;
-        std::cout << "empty integer arr3[0] = " << arr3[0] << std::endl;
+        std::cout << "empty integer arr3[0] = " << arr3[0] << std::endl; // this will throw an exception because arr3 is Null and you dereference it
 
         
         std::cout << "Fin de programme"<< std::endl;
