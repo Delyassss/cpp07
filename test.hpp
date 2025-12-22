@@ -1,5 +1,8 @@
 #ifndef TEST_HPP
 #define TEST_HPP
+#include <string>
+#include <iostream>
+
 
 
 
@@ -9,7 +12,7 @@ Tp multiply(Tp a, Tp b)
     return (a * b);
 }
 template <>
-std::string multiply (std::string a , std::string b)
+std::string multiply<std::string> (std::string a , std::string b)
 {
     return (a + "_" + b);
 }
