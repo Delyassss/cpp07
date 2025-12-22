@@ -7,6 +7,8 @@
 template <typename Tp, typename Fn>
 void iter(Tp *arr, const size_t size, Fn f)
 {
+    if (!arr || size == 0)
+        return;
     for (size_t i = 0; i < size; i++)
     {
         f(arr[i]);
