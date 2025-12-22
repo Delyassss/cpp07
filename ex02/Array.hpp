@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <exception>
 
 template <typename T>
 class Array
@@ -28,7 +29,7 @@ class Array
             if (other.data != NULL && arrsize > 0)
             {
                 this->data = new T[arrsize];
-                for (int i = 0; i < arrsize; i++)
+                for (unsigned int i = 0; i < arrsize; i++)
                 {
                     this->data[i] = other.data[i];
                 }
