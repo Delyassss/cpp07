@@ -19,7 +19,7 @@ class Array
         }
         Array(unsigned int n)
         {
-            data = new T[n];
+            data = new T[n]();
             arrsize = n;
         }
         Array(const Array &other) : data(NULL), arrsize(0)
@@ -41,18 +41,12 @@ class Array
                 delete [] data;
                 arrsize = other.arrsize;
                 data = new T[arrsize];
-                for (int i = 0; i < arrsize; i++)
+                for (unsigned int i = 0; i < arrsize; i++)
                 {
                     data[i] = other.data[i];
                 }
             }
             return *this;
-        }
-        T &operator[](unsigned int index)
-        {
-            if (index >= arrsize)
-                throw outofrange();
-            return data[index];
         }
         ~Array()
         {
@@ -60,6 +54,18 @@ class Array
             {
                 delete [] data;
             }
+        }
+        T &operator[](unsigned int index)
+        {
+            if (index >= arrsize)
+                throw outofrange();
+            return data[index];
+        }
+        const T &operator[](unsigned int index) const
+        {
+            if (index >= arrsize)
+                throw outofrange();
+            return data[index];
         }
         unsigned int size() const
         {
